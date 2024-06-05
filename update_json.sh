@@ -21,3 +21,4 @@ EOT
 
 # Save the next index to the file
 echo $NEXT_INDEX > "$INDEX_FILE"
+
