@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List of game IDs
-GAME_IDS=("5573038" "5626682" "game_id_3" "game_id_4" "5512711" "game_id_6" "game_id_7" "game_id_8" "game_id_9" "game_id_10")
+GAME_IDS=("5573038" "5626682" "5512711" "game_id_4" "game_id_5" "game_id_6" "game_id_7" "game_id_8" "game_id_9" "game_id_10")
 
 # Get the current index from a temporary file (initialize to -1 if it doesn't exist)
 INDEX_FILE="current_index.txt"
@@ -19,6 +19,5 @@ cat <<EOT > game_ids.json
 }
 EOT
 
-# Save the next index to the file
+# Save the next index to the file, resetting to zero if it reaches the end of the list
 echo $NEXT_INDEX > "$INDEX_FILE"
-
